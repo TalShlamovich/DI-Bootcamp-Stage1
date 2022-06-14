@@ -1,0 +1,38 @@
+body {
+	background-color: #e2ac7e;
+	text-align: center;
+}
+div {
+	border: dotted;
+	border-top: none;
+	width: 600px;
+	margin: auto;
+}
+
+h1 + p {
+	text-align: justify;
+	padding: 0px 15px;
+
+}
+
+h1 {
+	border: dotted;
+	border-right: none;
+	border-left: none;
+	text-align: center;
+	font-family: Fixture;
+	font-weight: 900;
+	font-style: italic;
+}
+
+ul{
+	list-style: none;
+}
+
+li:first-letter {
+	font-weight: bolder;
+}
+
+p.copyright {
+	font-size: 70%;
+}

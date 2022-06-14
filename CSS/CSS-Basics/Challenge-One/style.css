@@ -1,0 +1,28 @@
+body {
+	background-color: #54ccff;
+	font-family: "times new roman";
+}
+h1 {
+	font-weight: 600;
+}
+
+ul {
+	list-style: none;
+}
+
+li:first-letter {
+	font-size: 130%;
+	font-weight: bolder;
+}
+
+li {
+	line-height: 120%;
+}
+
+li {
+	text-align: center;
+}
+
+p .copyright {
+	font-size: 50%;
+}
