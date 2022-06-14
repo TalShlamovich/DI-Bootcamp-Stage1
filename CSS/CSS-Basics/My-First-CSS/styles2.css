@@ -1,0 +1,16 @@
+h2 {
+	color: blue;
+}
+.boxmodel {
+border: 5px outset red;
+padding: 5px 20px 5px 20px;
+margin: 0px 20px; 
+} /*top->right->bottom->left*/
+/*top-bottom->right-left*/
+
+p {
+	font-size: 20px;
+}
+span {
+	font-size: 5em;
+}
