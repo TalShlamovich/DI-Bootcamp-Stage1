@@ -1,0 +1,63 @@
+*{
+	color: skyblue;
+}
+
+footer p{
+	background-color: rosybrown;
+}
+
+h1+h4{
+	background-color: blueviolet;
+}
+
+ul > li {
+    background-color:blue;
+}
+
+a[href="#"] {
+    background-color:greenyellow;
+}
+
+/*selector:pseudo-class {
+  property: value;
+}*/
+
+/* unvisited link */
+a:link {
+  color: red;
+}
+
+/* visited link */
+a:visited {
+  color: green;
+}
+
+ /* mouse over link */
+a:hover {
+  color: hotpink;
+}
+
+li:first-child {
+	background-color: red;
+}
+
+li:last-child {
+	background-color: darkblue;
+}
+
+li:nth-child(2){
+	background-color: teal;
+}
+
+button {
+	background-color: red;
+}
+
+button:hover{
+	background-color: blue;
+}
+
+button:focus{
+	background-color: teal;
+}
+
