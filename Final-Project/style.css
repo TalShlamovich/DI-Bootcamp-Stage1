@@ -1,3 +1,4 @@
+/*Font*/
 @font-face {
   font-family: Joan;
   src: url(Joan-Regular.ttf);
@@ -8,38 +9,45 @@ body {
 	font-family: Joan, Cambria, Candara
 }
 
-div, p{
+/*div, p{
 	margin-block-start: 0;
     margin-block-end: 0;
-}
+}*/
+
+/*the first section (with the quote)*/
 
 header {
 	height: 100vh;
 	background-image: url(DB-Header.jpg);
 	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-end;
+	justify-content: center;
+	position: relative;
 
 	font-family: spirax;
 	font-style: italic;
-	position: relative;
+	font-size: 25px;
 }
 
-	header div {
-		position: absolute;
-		bottom: 20px;
-		margin: 0 auto;
-		display: flex;
-		width: 100%;
-		justify-content: center;
-	}
-
-.quote {
-	float: right;
-	margin: 100px 10px;	
+h1 {
+	margin-right: 100px;
 }
-
+header div {
+	position: absolute;
+	bottom: 20px;
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+	justify-content: center;
+}
+/*part about "Bowie's Personas*/
+/*in order to position the text and the nav-link, set position: relative of the container first*/
 article {
 	height: 100vh;
-	background-image: url(DB-Which2.jpg);
+	padding-right: 100px;
+	background-image: url(DB-Which4.jpg);
 	background-color: #010101;
 	background-repeat: no-repeat;
 	background-attachment: scroll;
@@ -69,14 +77,16 @@ div p {
 article div {
 	width: 50%;
 }
-
+/*last part with albums. Once again, first -> position: relative of the container
+2nd -> text and album covers*/
 footer {
+	/*border: 2px solid white;*/
 	height: 100vh;
-	/*width: 100vw;*/
+	padding-top: 200px;
+	padding-left: 100px;
 	background-color: #010101;
 	display: flex;
 	flex-direction: row;
-	/*border: 2px solid white;*/
 	position: relative;
 }
 
@@ -87,48 +97,79 @@ footer {
 	opacity: 0.7;
 }
 
-div a {
-	height: 230px;
-}
-
-.links>img:hover {
-	opacity: 1;
-}
 
 .albums {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
-	/*border: 2px solid blue;*/
-	width: 50%;
+	flex-basis: 30%;
+	gap: 20px 20px;
+	align-content: flex-start;
+	align-items: center;
+	margin-left: 25px;
+	width: 45%;
 	height: 100%;
+
 }
 
 .content {
-	/*border: 2px solid green;*/
-	width: 50%;
+	/*border: 2px solid green;*//*just for ease of identifying with dev. tools*/
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+	justify-content: flex-start;
+	align-items: stretch;
+	margin-right: 25px;
+	width: 45%;
 	height: 100%
 }
 
-
-/*.tooltip {
-	position: relative;
-	display: inline-block;		Wanted to try to use tooltip for links but messed it up in html big time
+div a {
+	height: 230px;
 }
 
-.tooltip .tooltiptext {
-	visibility: hidden;
-	width: 120px;
-	background-color: black;
-	color: #fff;
-	text-align: center;
-	padding: 5px 0;
-	border-radius: 6px;
-	position: absolute;
-	z-index: 1;
+/*making links a bit interacive*/
+.links>img:hover {
+	opacity: 1;
 }
 
-.tooltip:hover .tooltiptext {
-  visibility: visible;
-}*/
+/*nav buttons and interactivness*/
+.button {
+	margin-left: 30px;
+	margin-top: 60px;
+}
+
+.jump {
+	font-size: 20px;
+	padding: 0px, 0px;
+	height: 30px;
+	width: 50px;
+	color: #ffffff;
+	text-transform: Capitalize;
+	text-decoration: none;
+	background: #363636;
+	padding: 20px;
+	border-radius: 5px;
+	display: inline-block;
+	border: none;
+	transition: all 0.4s ease 0s;
+}
+
+.jump:hover {
+	background: #434343;
+	letter-spacing: 1px;
+	-webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+	box-shadow: 5px 40px -10px rgba(0,0,0,0.90);
+	transition: all 0.4s ease 0s;
+}
+/*link to my reference list*/
+.biblio {
+	text-decoration: none;
+	color: lightslategrey;
+}
+
+.biblio:hover {
+	text-decoration: underline;
+}
