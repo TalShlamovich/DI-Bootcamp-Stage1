@@ -1,5 +1,29 @@
-h1 {
+body {
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+	height: 100vh;
 	background-image: url(DB-Header.jpg);
-	background-color: #cccccc;
+	background-size: cover;
+
+	color: white;
+	font-family: spirax;
+	font-style: italic;
+	text-align: center-right;
+}
+.container {
+	float: right;
+	margin: 100px 10px;	
+}
+
+article {
+	height: 100vh;
+	background-image: url(DB-Which2.jpg);
+	background-color: #010101;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: left center;
+	background-size: auto;
 
 }
