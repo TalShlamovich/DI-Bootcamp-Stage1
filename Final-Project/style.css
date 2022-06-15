@@ -48,6 +48,16 @@ article {
 	flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    position: relative;
+}
+
+.empty {
+	position: absolute;
+	bottom: 20px;
+	margin: 0 auto;
+	display: flex;
+	width: 100%;
+	justify-content: center;
 }
 
 div p {
@@ -61,12 +71,13 @@ article div {
 }
 
 footer {
-	/*height: 100vh;*/
+	height: 100vh;
 	/*width: 100vw;*/
 	background-color: #010101;
 	display: flex;
 	flex-direction: row;
 	/*border: 2px solid white;*/
+	position: relative;
 }
 
 .links>img {
@@ -74,6 +85,10 @@ footer {
 	height: 230px;
 	border: 1px outset whitesmoke;
 	opacity: 0.7;
+}
+
+div a {
+	height: 230px;
 }
 
 .links>img:hover {
