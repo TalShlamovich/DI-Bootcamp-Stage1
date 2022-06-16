@@ -6,7 +6,7 @@
 
 body {
 	color: white;
-	font-family: Joan, Cambria, Candara
+	font-family: Joan
 }
 
 /*div, p{
@@ -46,7 +46,6 @@ header div {
 /*in order to position the text and the nav-link, set position: relative of the container first*/
 article {
 	height: 100vh;
-	padding-right: 100px;
 	background-image: url(DB-Which4.jpg);
 	background-color: #010101;
 	background-repeat: no-repeat;
@@ -54,9 +53,9 @@ article {
 	background-position: left center;
 	display: flex;
 	flex-direction: column;
-    align-items: flex-end;
-    justify-content: center;
-    position: relative;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
 }
 
 .empty {
@@ -81,10 +80,11 @@ article div {
 2nd -> text and album covers*/
 footer {
 	/*border: 2px solid white;*/
-	height: 100vh;
-	padding-top: 200px;
-	padding-left: 100px;
 	background-color: #010101;
+	height: 100%;
+	min-width: 0;
+	padding-top: 200px;
+	padding-left: 20px;
 	display: flex;
 	flex-direction: row;
 	position: relative;
@@ -97,18 +97,19 @@ footer {
 	opacity: 0.7;
 }
 
-
+/*want the album covers to be displayed in 2 rows of 3
+and shrink when the screen gets smaller*/
 .albums {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-evenly;
 	flex-wrap: wrap;
-	flex-basis: 30%;
+/*	flex-basis: 40%;*/
 	gap: 20px 20px;
 	align-content: flex-start;
 	align-items: center;
 	margin-left: 25px;
-	width: 45%;
+	width: 50%;
 	height: 100%;
 
 }
@@ -143,7 +144,7 @@ div a {
 .jump {
 	font-size: 20px;
 	padding: 0px, 0px;
-	height: 30px;
+	height: 25px;
 	width: 50px;
 	color: #ffffff;
 	text-transform: Capitalize;
@@ -154,6 +155,7 @@ div a {
 	display: inline-block;
 	border: none;
 	transition: all 0.4s ease 0s;
+	opacity: 0.7;
 }
 
 .jump:hover {
@@ -163,6 +165,7 @@ div a {
 	-moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
 	box-shadow: 5px 40px -10px rgba(0,0,0,0.90);
 	transition: all 0.4s ease 0s;
+	opacity: 1;
 }
 /*link to my reference list*/
 .biblio {
