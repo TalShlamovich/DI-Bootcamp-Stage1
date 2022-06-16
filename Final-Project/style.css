@@ -90,7 +90,7 @@ footer {
 	position: relative;
 }
 
-.links>img {
+.links img {
 	width: 230px;
 	height: 230px;
 	border: 1px outset whitesmoke;
@@ -131,7 +131,7 @@ div a {
 }
 
 /*making links a bit interacive*/
-.links>img:hover {
+.links img:hover {
 	opacity: 1;
 }
 
@@ -175,4 +175,31 @@ div a {
 
 .biblio:hover {
 	text-decoration: underline;
+}
+/*Tooltip for the album covers*/
+.tooltip {
+  position: relative;
+  /*display: inline-block;
+  border-bottom: 1px dotted black;*/
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #434343;
+  color: white;
+  opacity: 0.7;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: -55px;
+  right: 25%;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
 }
