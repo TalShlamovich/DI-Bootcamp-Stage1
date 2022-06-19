@@ -1,0 +1,76 @@
+/*General*/
+
+* {
+	font-family: "Times New Roman";
+	font-size: 18px;
+}
+
+header {
+	font-size: 26px;
+	font-weight: bold;
+}
+
+.mini-heading{
+	font-size: 24px;
+	font-weight: bold;
+}
+
+img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	border: 3px solid red;
+}
+
+
+/*1st Page*/
+hr {
+	height: 2px;
+	color: lightgray;
+	background-color: lightgray;
+}
+/*highlights in about section*/
+#bold {
+	font-weight: bold;
+}
+#yellow {
+	background-color: yellow;
+}
+
+.senses.paragraph {
+	padding-left: 50px;
+}
+
+.senses span {
+	font-size: 22px;
+	font-weight: bold;
+	text-decoration-line: underline;
+}
+
+ol {
+	list-style-type: upper-roman;
+}
+
+.media{
+	text-align: center;
+}
+
+/*2nd page*/
+
+.differences {
+	display: block;
+	width: 50%;
+	color: red;
+	text-align: center;
+	border: 1px solid red;
+	margin: 0 auto;
+}
+
+table {
+	width: 50%;
+	margin: 0 auto;
+}
+
+th, td {
+	border: 1px solid black;
+}
