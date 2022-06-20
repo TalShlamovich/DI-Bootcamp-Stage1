@@ -1,39 +1,58 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
     <link rel="stylesheet" href="login-signup.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100&display=swap" rel="stylesheet">
-	<title>Register</title>
+    <title>Register</title>
 </head>
-<body>
-	<form action="action-page.php">
-        <h1>Sign Up</h1><hr>
 
-		<label for="firstname">First Name</label>
+<body>
+
+    <nav>
+        <ul>
+            <li class="fa solid fa-money-bill-trend-up fa-2xl"></li>
+            <div>
+                <li><a href="login.html">Log In</a></li>
+                <li><a href="products.html" target=_blank>Our Products</a></li>
+                <li><a href="index.html">Home</a></li>
+            </div>
+        </ul>
+    </nav>
+
+    <form action="action-page.php">
+        <h1>Sign Up</h1>
+        <hr>
+
+        <label for="firstname">First Name</label>
         <input type="text" placeholder="Enter Your First Name" name="firstname" required><br>
 
-		<label for="lastname">Last Name</label>
+        <label for="lastname">Last Name</label>
         <input type="text" placeholder="Enter Your Last Name" name="lastname" required><br>
 
         <label for="username">Username</label>
         <input type="text" placeholder="Enter Your Username" name="username" required><br>
 
         <label for="email">Email</label>
-		<input type="email" placeholder="Enter Email" name="email" required><br>
+        <input type="email" placeholder="Enter Email" name="email" required><br>
 
         <label for="password">Password</label>
-		<input type="password" placeholder="Enter Password" name="password" min="5"><br>
-		
+        <input type="password" placeholder="Enter Password" name="password" min="5"><br>
+
         <div class="clearfix">
-            <button type="button" class="cancelbtn">Cancel</button>
-            <button type="submit" class="signupbtn">Sign Up</button>
-          </div>
+            <button type="button" class="cancel">Cancel</button>
+            <button type="submit" class="signup">Sign Up</button>
         </div>
-	</form>
+    </form>
+
+    <footer class="footer">
+        <p>2022 by Tal Shlamovich</p>
+    </footer>
 </body>
+
 </html>

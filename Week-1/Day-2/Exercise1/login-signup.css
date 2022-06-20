@@ -1,0 +1,100 @@
+* {
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+    box-sizing: border-box;
+}
+
+/* navbar */
+nav {
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%;
+  }
+
+  li {
+    float: right;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+  li.fa.solid.fa-money-bill-trend-up.fa-2xl {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    color: white;
+  }
+  /* data */
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+  }
+
+  input[type=text]:focus, input[type=password]:focus, input[type=email]:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  button, submit {
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+  }
+  
+  button:hover {
+    opacity:1;
+  }
+
+  .cancel {
+    padding: 14px 20px;
+    background-color: grey;
+  }
+
+  .cancel, .signup {
+    float: left;
+    width: 50%;
+  }
+
+  .forgot {
+    padding: 14px 20px;
+    background-color: grey;
+  }
+
+  .forgot, .login {
+    float: left;
+    width: 50%;
+  }
+
+    /* footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
