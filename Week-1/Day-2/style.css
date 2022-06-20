@@ -1,0 +1,57 @@
+body {
+	height: 100vh;
+	width: 100vw;
+	margin: 0;
+
+}
+
+.parent {
+
+	background-color: darkred;
+	padding: 30px;
+	width: 100%;
+	/*position: relative;*/
+}
+
+.child {
+	background-color: darkblue;
+	padding: 30px;
+	/*postion: relative;*/
+
+}
+
+.box {
+	background-color: darkgoldenrod;
+	padding: 30px;
+	border: 2px solid brown;
+	font-size: 14px;
+	text-align: left;
+	/*position: absolute;*/
+	position: relative;
+	/*position: fixed;*/ /*fixed to the screen. Can use for sticky elements like nav*/
+}
+
+.box img {
+	width: 100px;
+	height: 100px;
+	float: left;
+	padding: 10px;
+}
+
+@media (min-width: 1024px) {
+	.parent {
+		background-color: orange;
+	}
+}
+
+@media (max-width: 768px) {
+	.parent {
+		background-color: green;
+	}
+}
+
+@media (max-width: 450px) {
+	.box {
+		font-size: 32px;
+	}
+}
