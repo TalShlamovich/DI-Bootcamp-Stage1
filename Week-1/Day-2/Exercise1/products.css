@@ -1,0 +1,76 @@
+* {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+
+/* navbar */
+nav {
+    position: relative;
+}
+
+ul {
+    list-style-type: none;
+    height: 55px;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: black;
+    top: 0;
+    width: 100%;
+}
+
+li {
+    float: right;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.fa.solid.fa-money-bill-trend-up.fa-2xl {
+    position: absolute;
+    left: 15px;
+    top: 25px;
+    color: white;
+}
+
+/* footer */
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+/* Products */
+
+/* table, th, td, img {
+    border: 1px solid black;
+  } */
+img {
+    height: 200px;
+    width: 267px;
+    margin-top: 5%;
+    border: ridge whitesmoke;
+}
+table {
+    position: absolute;
+    left: 15%;
+    border-spacing: 20px;
+    width: 70%;
+    text-align: center;
+}
+
+th {
+    border: outset;
+    width: 300px;
+}
