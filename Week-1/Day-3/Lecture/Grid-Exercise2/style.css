@@ -1,0 +1,46 @@
+.wrapper {
+    height: 100vh;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+    "header header header"
+    "hero main main"
+    "sidebar main main"
+    "sidebar extra extra"
+    "images images posts"
+    "footer footer footer"
+}
+
+.header {
+    grid-area: header;
+    background-color: aqua;
+}
+.main {
+    grid-area: main;
+    background-color: yellow;
+}
+.extra {
+    grid-area: extra;
+    background-color: grey;
+}
+.hero {
+    grid-area: hero;
+    background-color: pink;
+}
+.sidebar {
+    grid-area: sidebar;
+    background-color: lightgreen;
+}
+.images {
+    grid-area: images;
+    background-color: green;
+}
+.posts {
+    grid-area: posts;
+    background-color: pink;
+}
+.footer {
+    grid-area: footer;
+    background-color: orange;
+}
