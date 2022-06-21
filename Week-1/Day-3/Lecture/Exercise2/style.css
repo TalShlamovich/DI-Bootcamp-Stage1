@@ -1,0 +1,28 @@
+.parent {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.child {
+    border: 1px solid #000;
+    padding: 30px;
+    text-align: center;
+}
+
+.one {
+    background-color: red;
+    width: 100%;
+}
+
+.two {
+    background-color: green;
+    width: 50px;
+    align-self: end;
+}
+
+.three {
+    background-color: blue;
+    width: 100%;
+}

@@ -90,7 +90,7 @@ input[type=text], input[type=password], input[type=email] {
 
     /* footer */
 .footer {
-    position: fixed;
+    /* position: fixed; */
     left: 0;
     bottom: 0;
     width: 100%;

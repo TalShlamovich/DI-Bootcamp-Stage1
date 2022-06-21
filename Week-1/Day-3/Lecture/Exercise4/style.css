@@ -1,0 +1,29 @@
+.parent {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.child {
+    border: 1px solid #000;
+    padding: 30px;
+    text-align: center;
+}
+
+.one {
+    background-color: red;
+    width: 50%;
+}
+
+.two {
+    background-color: green;
+    width: 100%;
+}
+
+.three {
+    background-color: blue;
+    width: 50%;
+}
