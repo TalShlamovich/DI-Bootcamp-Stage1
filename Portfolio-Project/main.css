@@ -38,19 +38,25 @@ header {
     
 }
 
+#overlay {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffffa0;
+}
+/* had to manually move the text to the correct position */
 #bgimagesetup {
     position: absolute;
     top: 0;
     left: 5%;
 }
 
-#overlay {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffffa0;
-}
-
 /* About me section */
 #photo {
     border-radius: 50%;
+}
+
+
+/* portfolio section */
+#portfolio {
+    max-height: 80vh;
 }
