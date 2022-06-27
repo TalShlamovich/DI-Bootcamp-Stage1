@@ -2,7 +2,10 @@
 // Create a variable called sentence. The value of the variable should be a string that contains the words “not” and “bad”.
 // For example, “The movie is not that bad, I like it”.
 
-let sentence = "This movie is not so bad !";
+let sentence = "This dinner is bad !";
+// let sentence = "This dinner is not that bad ! You cook well";
+// let sentence = "This movie is not so bad !";
+
 // console.log(sentence.length);
 
 
