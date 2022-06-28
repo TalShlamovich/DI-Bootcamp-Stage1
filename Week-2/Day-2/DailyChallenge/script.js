@@ -35,3 +35,12 @@ else if (wordBad > wordNot) {
 // If the word “bad” does not come after “not” or the words are not in the sentence, console.log the original sentence.
 
 
+// array method
+
+// let str = "This dinner is not that bad ! You cook well"
+// let arr =str.split('');
+// let not = str.indexOf('not');
+//let bad = str.indexOf('bad');
+//if (not < bad && not !=-1) {
+    // arr.splice(not,bad-not+3,'good')
+// }
