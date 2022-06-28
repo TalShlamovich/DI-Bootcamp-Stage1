@@ -68,7 +68,7 @@ let colors = ["red", "orange", "yellow", "green", "blue"]
 // Loop through the array and as you loop console.log a string like so: “My #1 choice is blue”, “My #2 choice is red” ect… .
 
 for (let i=0; i<colors.length; i++) {
-    console.log(`My #${i} choice is ${colors[i]}`);
+    console.log(`My #${i+1} choice is ${colors[i]}`);
 }
 
 // Bonus: Change it to console.log “My 1st choice”, “My 2nd choice”, “My 3rd choice”, picking the correct suffix for each number.
@@ -89,7 +89,7 @@ for (let i=0; i<colors.length; i++) {
 // Prompt the user for a number.
 
 let num = prompt("Number please")
-
+console.log(typeof(num));
 
 // Hint : Check the data type you receive from the prompt (ie. Use the typeof method)
 
@@ -100,7 +100,7 @@ num=Number(num);
 
 while (num<10) {
     num++;
-    num = prompt("Number please")
+    num = prompt("Go larger")
 }
 
 
@@ -169,3 +169,35 @@ for (x in family) {
 for (x in family) {
     console.log(family[x]);
 }
+
+// Exercise 6
+// Instructions
+let details = {
+  my: 'name',
+  is: 'Rudolf',
+  the: 'raindeer'
+}
+// Given the object above and using a for loop, console.log “my name is Rudolf the raindeer”.
+let line = ""
+for (x in details) {
+    line = (`${line} ${x} ${details[x]}`);
+}
+console.log(line);
+
+// Exercise 7 : Secret Group
+// Instructions
+let names = ["Jack", "Philip", "Sarah", "Amanda", "Bernard", "Kyle"];
+// A group of friends have decided to start a secret society.
+// The society’s name will be the first letter of each of their names sorted in alphabetical order.
+// Hint: a string is an array of letters
+// Console.log the name of their secret society. The output should be “ABJKPS”
+
+names = names.sort()
+console.log(names);
+let secret=""
+for (let i in names) {
+    secret = (`${secret}${names[i][0]}`)
+    
+}
+console.log(secret);
+
