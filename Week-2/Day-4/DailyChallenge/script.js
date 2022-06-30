@@ -1,19 +1,28 @@
-let phrase = prompt('type a few words separated by commas');
-arr = phrase.split(",");
-// console.log(phrase);
-// console.log(arr);
+let words = ["Hello", "World", "in", "a", "frame"];
 
-function frame() {
-    for (let i = 0; i < 1; i++) {
-        console.log("*******");
-        for(j = 0; j < arr.length; j++) {
-            // arr = arr[j].split(",");
-            console.log("*" + arr[j] + "*");
-        }
-    }
-    console.log("*******");
-    console.log(arr);
+function longestWordLength(arr) {
+  let length = arr[0].length;
+  for (let i = 1; i < words.length; i++) {
+      if(arr[i].length > length){
+        length = arr[i].length;
+      }
+  }
+  return length;
 }
-frame()
 
-//idk man I am trying my best here
+function addSpaces(word,length){
+  if(word.length == length){
+    return "";
+  }
+  return " ".repeat(length-word.length);
+}
+
+function stars () {
+  let length = longestWordLength(words);
+  console.log("*".repeat(length+4));
+  for(x in words){
+    console.log('* ' + words[x] + addSpaces(words[x],length) + ' *');
+  }
+  console.log("*".repeat(length+4));
+}
+stars();
