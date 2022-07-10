@@ -21,3 +21,10 @@ line = ""
 for x in message:
     line += x;
     print(line)
+
+
+# 4. Bonus: Swap some characters around then print the newly jumbled string (hint: look into the shuffle method).
+import random
+
+shuffledMessage = "".join(random.sample(message, len(message)))
+print(shuffledMessage)
