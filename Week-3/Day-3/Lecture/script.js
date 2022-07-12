@@ -27,11 +27,11 @@ function start() {
         box.style.left = pos + 'px'
     }, 5)
 
-    let id1 = setInterval(function(){
-        if (pos == 350){
-            clearInterval(id1);
-        }
-        pos++
-        box.style.top = pos + 'px'
-    }, 5)
+    // let id1 = setInterval(function(){
+    //     if (pos == 350){
+    //         clearInterval(id1);
+    //     }
+    //     pos++
+    //     box.style.top = pos + 'px'
+    // }, 5)
 }
