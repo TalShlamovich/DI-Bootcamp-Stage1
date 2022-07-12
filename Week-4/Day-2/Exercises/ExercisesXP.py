@@ -159,6 +159,7 @@ for i in teenAgeList:
         del namesList[teenAgeList.index(i)]
 print(namesList)
 
+teenagers = [('David', 17), ('Shaul', )]
 
 # Exercise 10 : Sandwich Orders
 # Instructions
