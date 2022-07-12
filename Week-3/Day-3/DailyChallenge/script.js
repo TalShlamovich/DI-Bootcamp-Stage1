@@ -9,6 +9,6 @@ form.addEventListener("submit", function (event){
         sendData()
     }
     else{ 
-        alert("Please enter a text with letters only.")
+        alert("Only letters are allowed")
     }    
 })
