@@ -85,11 +85,11 @@
 // In your Javascript file add the functionality which will allow you to drag the box and drop it into the target.
 // Check out the Course Notes named DOM animations.
 
-let box = document.getElementById("box")
+// let box = document.getElementById("box")
 
-box.addEventListener("dragend",function(event){
-let x = event.clientX
-    let y = event.clientY
-    box.style.left = x + "px"
-    box.style.top= y + "px"
-})
+// box.addEventListener("dragend",function(event){
+// let x = event.clientX
+//     let y = event.clientY
+//     box.style.left = x + "px"
+//     box.style.top= y + "px"
+// })
