@@ -1,26 +1,24 @@
 matrix = [
-    ['7','T','h','i','s','$','#','^'],
-    ['i','s','%',' ','M','a','t','r'],
-    ['3','i','x','#',' ',' ','%','!']
+    ['7', 'T', 'h', 'i', 's', '$', '#', '^'],
+    ['i', 's', '%', ' ', 'M', 'a', 't', 'r'],
+    ['3', 'i', 'x', '#', ' ', ' ', '%', '!']
 ]
-message = ""
-prev_char = ''
-current_char = ''
-for index, line in enumerate(matrix):
-    # print(index, line)
-    for i, character in enumerate(matrix[index]):
-        current_char = character
-        # print(type(character))
-        if character.isalpha():
-            prev_char = character
-            message += current_char
-        elif character.isdigit():
-            continue
-        else:
-            message += " "
 
-        if message[i-1] == " ":
+
+
+message = ""
+is_prevchar = False
+current_char = ""
+for l in matrix:
+
+    for character in l:
+        if character.isdigit():
             continue
-            
+        elif character.isalpha():
+            is_prevchar = True
+            message +=character
+        if is_prevchar and not character.isalpha():
+            message +=" "
+            is_prevchar = False
 
 print(message)
