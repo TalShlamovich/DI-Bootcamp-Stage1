@@ -50,3 +50,50 @@ print(all_cats)
 sara_pets = Pets(all_cats)
 
 sara_pets.walk()
+
+
+# 🌟 Exercise 2 : Dogs
+# Instructions
+# Create a class called Dog with the following attributes name, age, weight.
+# Implement the following methods in the Dog class:
+# bark: returns a string which states: “<dog_name> is barking”.
+# run_speed: returns the dogs running speed (weight/age*10).
+# fight : takes a parameter which value is another Dog instance, called other_dog.
+# This method returns a string stating which dog won the fight. The winner should be the dog with the higher run_speed x weight.
+
+# Create 3 dogs and run them through your class.
+
+class Dog:
+    def __init__(self, name: str, age: int, weight: int) -> None:
+        self.name = name
+        self.age = age
+        self.weight = weight
+
+    def bark(self) -> str:
+        return f"{self.name} is barking"
+    
+    def run_speed(self) -> int:
+        speed = self.weight/self.age*10
+        return speed
+
+    def fight(other_dog, self) ->str:
+        other_dog.factor = other_dog.run_speed() * other_dog.weight
+        self.factor = self.run_speed() * self.weight
+        if other_dog.factor > self.factor:
+            print(other_dog.name)
+            return other_dog.name
+        else:
+            print(self.name)
+            return self.name
+
+
+dog1 = Dog("dog1", 1, 10)
+dog2 = Dog('dog2', 2, 20)
+dog3 = Dog('dog3', 3, 30)
+
+# dog3.fight(dog1)
+        
+
+
+
+
