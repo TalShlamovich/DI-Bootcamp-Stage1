@@ -12,7 +12,7 @@
 # family_presentation: a method that prints the family’s last name and all the members’ first name.
 
 class Family:
-    def __init__(self, memebers: list, last_name:str) -> None:
+    def __init__(self, memebers: list[dict], last_name:str) -> object:
         self.members = memebers
         self.last_name = last_name
     
@@ -22,20 +22,23 @@ class Family:
         self.members.append(baby)
         print(f"Congratulation for {baby['name']}'s birth")
 
-    def is_18(self, name):
+    def is_18(self, name) -> None:
        for member in self.members:
-        if name in member['name']:
-            if member['age'] >= 18:
-                print("18 or over")
-                return True
-            else: 
-                print("Not old enough")
+            if name in member['name']:
+                if member['age'] >= 18:
+                    print("18 or over")
+                    return True
+                else: 
+                    print("Not old enough")
+                    return False
+                
 
-    def family_presentation(self):
+    def family_presentation(self) -> str:
         sentence = f"{self.last_name}"
         for member in self.members:
             sentence += f"\n{member['name']}"
         print(sentence)
+        return sentence
 
 
 
@@ -45,7 +48,24 @@ ivanov = Family([
     {'name':'Sarah','age':32,'gender':'Female','is_child':False}
 ], 'Ivanov')
 
-ivanov.born(name = 'Lisa', age = 15, gender = 'Female', is_child = True)
+ivanov.born(name = 'Lisa', age = 20, gender = 'Female', is_child = True)
 ivanov.is_18('Lisa')
 ivanov.family_presentation()
 
+
+
+# class TheIncredibles(Family):
+    
+#     def use_power(self, name:str):
+#        if self.is_18(name):
+            
+
+
+
+
+# incredible = [
+#     {'name':'Michael','age':35,'gender':'Male','is_child':False,'power': 'fly','incredible_name':'MikeFly'},
+#     {'name':'Sarah','age':32,'gender':'Female','is_child':False,'power': 'read minds','incredible_name':'SuperWoman'}
+# ]
+
+# incredible_fam = TheIncredibles(incredible, 'Incredible')
