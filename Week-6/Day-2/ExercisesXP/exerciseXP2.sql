@@ -24,6 +24,7 @@
 -- select * from film where film_id in (15, 150)
 
 -- Write a query which should check if your favorite movie exists in the database. Have your query get the film ID, title, description, length and the rental rate, these details can be found in the “film” table.
+-- select film_id, title, description, length, rental_rate from film where title ilike '%cider%'
 
 -- No luck finding your movie? Maybe you made a mistake spelling the name. Write a query to get the film ID, title, description, length and the rental rate of all the movies starting with the two first letters of your favorite movie.
 -- select film_id, title, description, length, rental_rate from film where left(title,2) = 'Th'
@@ -46,8 +47,12 @@
 -- left join inventory on film.film_id = inventory.film_id 
 -- where inventory.film_id is NULL
 
+--other way
+-- select film.film_id, film.title from film where film.film_id not in (select film_id from inventory)
+
 -- Write a query to find which city is in which country.
--- select city.city, country.country from city join country on city.country_id = country.country_id
+-- select city.city, country.country from city
+-- join country on city.country_id = country.country_id
 
 -- Bonus You want to be able to see how your sellers have been doing? Write a query to get the customer’s id, names (first and last), the amount and the date of payment ordered by the id of the staff member who sold them the dvd.
 -- select customer.customer_id, first_name, last_name, amount, payment_date, staff_id 
