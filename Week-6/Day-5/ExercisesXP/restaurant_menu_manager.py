@@ -1,4 +1,6 @@
 import psycopg2
+import pandas as pd
+import pandas.io.sql as psql
 
 HOSTNAME = 'localhost'
 USERNAME = 'postgres'
@@ -35,7 +37,7 @@ class MenuItem:
 
     def delete(self) -> str:
         """Create a query that deletes a row from the table"""
-        q = f"delete from menu where dish_name = '{self.name}' and price = {self.price}"
+        q = f"delete from menu where dish_name = '{self.name}' or price = {self.price}"
         
         MenuItem.run_query(q)
         return q
@@ -43,7 +45,7 @@ class MenuItem:
 
     def update(self, name: str, price: float) -> str:
         """Create a query that updates a row in the table"""
-        q = f"update menu set dish_name = '{name}', price = {price} where dish_name = '{self.name}' and price = {self.price}"
+        q = f"update menu set dish_name = '{name}', price = {price} where dish_name = '{self.name}' or price = {self.price}"
 
         MenuItem.run_query(q)
         print(f"You updated the entry to {name} for {price}NIS")
@@ -53,10 +55,10 @@ class MenuItem:
 
     def all() -> str:
         """Create a query that selects all rows in the table"""
-        q = f"select * from menu"
 
-        print(MenuItem.run_query(q))
-        return q
+        connection = psycopg2.connect(host=HOSTNAME, user=USERNAME, password=PASSWORD, dbname=DATABASE)
+        menu = pd.read_sql('select dish_name, price from menu', connection)
+        print(menu)
 
 
     def get_by_name(name) -> str:
@@ -74,7 +76,7 @@ item = MenuItem('Burger', 35)
 # item.save()
 # item.delete()
 # item.update('Veggie Burger', 37)
-# item2 = MenuItem.get_by_name('Beef Stew')
+item2 = MenuItem.get_by_name('Beef Stew')
 # items = MenuItem.all()
 
 
