@@ -52,7 +52,7 @@ class MenuItem:
         
         return q
 
-
+    @classmethod
     def all() -> str:
         """Create a query that selects all rows in the table"""
 
