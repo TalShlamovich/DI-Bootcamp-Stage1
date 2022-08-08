@@ -1,0 +1,22 @@
+{%load static%}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="{% static 'style.css' %}" rel="stylesheet">
+    <title>User Profile</title>
+</head>
+<body>
+    {%if Gender == 'M'%}
+        <h1>Welcome, Mr. {{Name}}</h1>
+    {%else%}
+        <h1>Welcome, Ms. {{Name}}</h1>
+    {%endif%}
+
+
+    {{Name}} | {{GitHub}} | {{Hobbies}} | {{Gender}}
+</body>
+</html>
