@@ -7,11 +7,10 @@
     <title>Animal</title>
 </head>
 <body>
-    <h2>Family: {{family}}</h2>
-    <ul>
-        {%for animal in animals%}
-        <li>{{animal}}</li>
-        {%endfor%}
-    </ul>
+    Name: {{animal.name}}<br>
+    Number of legs: {{animal.legs}}<br>
+    Average weight: {{animal.weight}}<br>
+    Average height: {{animal.height}}<br>
+    Average speed: {{animal.speed}}<br>
 </body>
 </html>

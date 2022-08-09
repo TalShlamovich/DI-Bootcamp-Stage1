@@ -4,6 +4,9 @@ from django.db import models
 class Family(models.Model):
     name = models.CharField(max_length=50)
 
+    def __str__(self) -> str:
+        return self.name
+
 
 class Animal(models.Model):
     name = models.CharField(max_length=50, null=True) 
@@ -14,4 +17,4 @@ class Animal(models.Model):
     family = models.ForeignKey(Family, null = True, on_delete = models.SET_NULL, related_name='posts')
 
     def __str__(self) -> str:
-        return self.id + ' ' + self.legs + ' ' + self.height + ' ' + self.weight + ' ' + self.speed + ' ' + self.family
+        return self.name 

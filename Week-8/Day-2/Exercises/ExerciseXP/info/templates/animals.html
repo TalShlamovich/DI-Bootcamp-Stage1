@@ -4,14 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animal</title>
+    <title>ANIMALS</title>
 </head>
 <body>
-    <h2>Family: {{family}}</h2>
     <ul>
         {%for animal in animals%}
-        <li>{{animal}}</li>
+        <li><a href = "{%url 'animal' animal.id%}">{{animal}}</a></li>
         {%endfor%}
     </ul>
+    
+
 </body>
 </html>
