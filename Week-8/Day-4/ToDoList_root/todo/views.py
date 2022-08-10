@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse # pass view information into the browser
 from .models import Todo, Category
 from .forms import TodoForm
+from datetime import datetime, date
 
 
 # Create your views here.
@@ -34,3 +35,14 @@ def display (request):
     all_todos = Todo.objects.order_by('date_creation')
     context = {'todos': all_todos}
     return render(request, 'display.html', context)
+
+
+def complete(request, object_id):
+    if request.method == 'POST':
+        task = Todo.objects.get(id = object_id) 
+        task.has_been_done = True
+        task.date_completion = date.today()
+        task.save()
+
+    context = {'complete': task}
+    return render (request, 'display.html', context)

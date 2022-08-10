@@ -8,17 +8,24 @@
 </head>
 <body>
     <h1>TO-DO LIST</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
         {% for todo in todos %}
-            <ul>
+        <ul>
             
-                <h3>{{ todo.title }}</h3>
-                <li>Details: {{ todo.details}}</li>
-                <li>Created: {{ todo.date_creation}}</li>
-                <li>Complete by: {{ todo.deadline_date}}</li>
-                <li>From Category: {{ todo.category}}</li>
+            <h3>{{ todo.title }}</h3>
+            <li>Details: {{ todo.details}}</li>
+            <li>Created: {{ todo.date_creation}}</li>
+            <li>Complete by: {{ todo.deadline_date}}</li>
+            <li>From Category: {{ todo.category}}</li>
             
-            </ul>
+        </ul>
+        <a href="{ %url complete% }"></a><input type="submit" value="BUTTON">
         {% endfor %}
+        
+    </form>
+
 
 </body>
 </html>
