@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 # Create your models here.
 
@@ -11,6 +12,9 @@ class Gif_model(models.Model):
     def __str__(self) -> str:
         return self.title + ' ' + self.url
 
+    def get_absolute_url(self):
+        return reverse('show_gif', args = [self.id])
+
 
 class Category_model(models.Model):
     name = models.CharField(max_length=100)
@@ -18,3 +22,6 @@ class Category_model(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('show_category', args = [self.id])

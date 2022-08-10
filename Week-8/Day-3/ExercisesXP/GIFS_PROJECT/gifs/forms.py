@@ -1,4 +1,5 @@
 from django import forms
+from .models import Category_model, Gif_model
 
 # GifForm with the fields
 # uploader_name
@@ -10,9 +11,9 @@ class GifForm (forms.Form):
     uploader_name = forms.CharField()
     title = forms.CharField()
     url = forms.URLField()
-    categories = forms.ModelMultipleChoiceField()
+    categories = forms.ModelMultipleChoiceField( queryset=Category_model.objects.all().order_by('id'))
 
 
 class CategoryForm(forms.Form):
-    name = forms.CharField()
+    name = forms.CharField(min_length=3, max_length=50)
     
