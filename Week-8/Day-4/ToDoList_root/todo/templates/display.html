@@ -8,9 +8,9 @@
 </head>
 <body>
     <h1>TO-DO LIST</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{ form.as_p }}
+    
+        
+        
         {% for todo in todos %}
         <ul>
             
@@ -21,10 +21,13 @@
             <li>From Category: {{ todo.category}}</li>
             
         </ul>
-        <a href="{ %url complete% }"></a><input type="submit" value="BUTTON">
+        <form method="post", action="{% url 'complete' todo.id%}">
+            {% csrf_token %}
+            <input type="submit" value="BUTTON">
+        </form>
         {% endfor %}
         
-    </form>
+    
 
 
 </body>

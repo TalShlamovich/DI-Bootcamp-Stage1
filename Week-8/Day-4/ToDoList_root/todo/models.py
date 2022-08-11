@@ -1,4 +1,4 @@
-from unicodedata import category
+from django.urls import reverse
 from django.db import models
 from datetime import datetime, date
 
@@ -10,6 +10,9 @@ class Category(models.Model):
 
     def __str__(self) -> str:
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('category', args=[self.id])
 
 
 class Todo(models.Model):

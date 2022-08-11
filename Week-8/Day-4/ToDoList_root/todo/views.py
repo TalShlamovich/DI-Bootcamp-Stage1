@@ -1,13 +1,13 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse # pass view information into the browser
 from .models import Todo, Category
-from .forms import TodoForm
+from .forms import TodoForm, CategoryForm
 from datetime import datetime, date
 
 
 # Create your views here.
 
-def todo (request):
+def create_todo (request):
 
     if request.method == 'POST':
         form_filled = TodoForm(request.POST)
@@ -26,7 +26,7 @@ def todo (request):
             
 
     context = {'form': TodoForm}
-    return render(request, 'todo.html', context)
+    return render(request, 'create_todo.html', context)
 
 
 
@@ -34,6 +34,7 @@ def display (request):
 
     all_todos = Todo.objects.order_by('date_creation')
     context = {'todos': all_todos}
+    
     return render(request, 'display.html', context)
 
 
@@ -44,5 +45,7 @@ def complete(request, object_id):
         task.date_completion = date.today()
         task.save()
 
-    context = {'complete': task}
-    return render (request, 'display.html', context)
+    
+    return  redirect('display')
+
+

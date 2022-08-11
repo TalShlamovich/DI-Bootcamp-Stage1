@@ -11,5 +11,7 @@ class TodoForm(forms.Form):
     category = forms.ModelChoiceField(queryset=Category.objects.all().order_by('name'))
 
 
-class Done(forms.Form):
-    pass
+class CategoryForm(forms.Form):
+    name = forms.CharField()
+    image = forms.URLField()
+    
